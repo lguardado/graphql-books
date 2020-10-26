@@ -4,10 +4,9 @@ const { graphqlHTTP } = require('express-graphql');
 const schema = require('./schema/schema');
 const mongoose = require('mongoose');
 
-const app = express()
+const app = express();
 const port = process.env.port || 4000;
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:
-    ${process.env.DB_PASSWORD}@${process.env.DB_URL}`,
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_URL}`,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
